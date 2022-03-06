@@ -9,44 +9,23 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-50 dark:bg-darkBg lg:py-20 sm:py-16 py-12 font-mono border-t transition-all transform duration-500 ease-in-out">
+    <footer className="bg-neutral-50 dark:bg-darkBg lg:py-20 sm:py-16 py-12 font-spartan border-t transition-all transform duration-500 ease-in-out">
       <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
         <div className="flex space-x-4 items-center justify-center">
           <Link href="/">
-            <a className="lg:text-4xl text-3xl font-medium dark:text-lightTitle text-darkTitle">
-              Fruschain
+            <a className="font-spartan text-4xl font-semibold text-primary dark:text-darkText">
+              Deriate
             </a>
           </Link>
         </div>
         <nav className="flex sm:flex-row flex-col items-center justify-center lg:space-x-2 space-x-1 md:mt-10 mt-5">
           <Link href="/posts">
-            <a className="text-lg">Haberler</a>
-          </Link>
-          <Link href="/tags/nft">
-            <a className="text-lg">NFT</a>
-          </Link>
-          <Link href="/tags/kultur">
-            <a className="text-lg">Kültür</a>
-          </Link>
-          <Link href="/tags/teknoloji">
-            <a className="text-lg">Teknoloji</a>
-          </Link>
-          <Link href="/tags/metaverse">
-            <a className="text-lg">Metaverse</a>
-          </Link>
-          <Link href="/tags/blockchain">
-            <a className="text-lg">Blockchain</a>
-          </Link>
-          <Link href="/tags/defi">
-            <a className="text-lg">DeFi</a>
-          </Link>
-          <Link href="/development">
-            <a className="text-lg">Development</a>
+            <a className="text-lg text-primary dark:text-darkText">Haberler</a>
           </Link>
         </nav>
 
         <div className="mt-10">
-          <div className="flex space-x-4 items-center justify-center dark:text-lightText text-darkText">
+          <div className="flex space-x-4 items-center justify-center text-primary dark:text-darkText">
             <TwitterLogo size={24} />
             <InstagramLogo size={24} />
             <TelegramLogo size={24} />
