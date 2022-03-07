@@ -42,6 +42,11 @@ const PostDetail = ({ postDetails }) => {
                   {postDetails.title}
                 </h1>
               </div>
+              <div className="max-w-4xl mx-auto mt-10">
+                <p className="font-mulish text-center text-xl text-primary dark:text-darkText">
+                  {postDetails.postExcerpt}
+                </p>
+              </div>
             </div>
             {/* content */}
             <div className="md:mt-10 mt-7">
