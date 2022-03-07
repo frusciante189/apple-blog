@@ -56,7 +56,7 @@ const PostDetail = ({ postDetails }) => {
               </div>
               <div className="md:mt-10 mt-5">
                 <div
-                  className="prose max-w-5xl mx-auto prose-neutral dark:prose-invert font-mulish"
+                  className="prose max-w-5xl mx-auto prose-neutral dark:prose-invert font-mulish xl:prose-lg"
                   dangerouslySetInnerHTML={{ __html: postDetails.content.html }}
                 />
               </div>
