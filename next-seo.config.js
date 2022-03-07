@@ -1,5 +1,3 @@
-import logo from "./public/logo.jpg";
-
 export default {
   title: "Deriate",
   description: "Apple Ekosistemi hakkında haberler",
@@ -11,14 +9,9 @@ export default {
     site_name: "Deriate",
     images: [
       {
-        url: logo,
+        url: "https://images.unsplash.com/photo-1560851240-099afcad338b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
         alt: "Deriate",
       },
     ],
-  },
-  twitter: {
-    handle: "@venicemartian",
-    site: "@venicemartian",
-    cardType: "summary_large_image",
   },
 };
