@@ -40,6 +40,7 @@ const FeaturedPost = ({ post }) => {
                 src={post.featuredImage.url}
                 layout="fill"
                 objectFit="cover"
+                alt={post.title}
               />
             </div>
           </div>

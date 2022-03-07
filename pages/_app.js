@@ -7,9 +7,10 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Script
         strategy="lazyOnload"
+        id="first-script"
         src={`https://www.googletagmanager.com/gtag/js?id=G-5DBGBJH9FX`}
       />
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" id="second-script">
         {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
