@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isOpen, setIsOpen } = useProvider();
   return (
     <>
-      <header className="py-4 sticky top-0 left-0 z-30 bg-neutral-50 dark:bg-darkBg transition-colors duration-300 ease-in-out">
+      <header className="py-4 sticky top-0 left-0 z-30 bg-neutral-50 dark:bg-darkBg transition-colors duration-300 ease-in-out text-transparent ">
         <div className="lg:px-8 sm:px-6 px-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
