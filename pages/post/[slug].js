@@ -13,6 +13,12 @@ const PostDetail = ({ postDetails }) => {
       title: `Deriate | ${postDetails.title}`,
       description: postDetails.excerpt,
       url: `https://www.deriate.com/post/${postDetails.slug}`,
+      images: [
+        {
+          url: postDetails.featuredImage.url,
+          alt: postDetails.title,
+        },
+      ],
     },
   };
 
