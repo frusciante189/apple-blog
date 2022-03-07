@@ -9,7 +9,7 @@ export default {
     site_name: "Deriate",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1560851240-099afcad338b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+        url: "https://media.graphcms.com/udSiNz6RgOFfqJ29yGVQ?_ga=2.180357607.1788949347.1646580573-1778747608.1642625803",
         alt: "Deriate",
       },
     ],
