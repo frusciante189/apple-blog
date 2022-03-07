@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lineEffect::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  transition: 0.4s width linear;
+}
+
+.lineEffect:hover::after {
+  width: 0;
+}

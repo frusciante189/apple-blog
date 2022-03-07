@@ -6,7 +6,7 @@ import Provider from "../context/context";
 const Layout = ({ children }) => {
   return (
     <Provider>
-      <div className="dark:bg-darkBg bg-neutral-50 antialiased transition-colors duration-300 ease-in-out">
+      <div className="dark:bg-darkBg bg-neutral-50 antialiased transition-colors duration-300 ease-in-out selection:bg-purple-500">
         <Navbar />
         <main>{children}</main>
         <Footer />

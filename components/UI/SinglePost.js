@@ -7,7 +7,7 @@ const SinglePost = () => {
       <div>
         <div className="grid grid-cols-12 lg:gap-6 gap-3">
           <div className="col-span-9">
-            <h2 className="text-primary dark:text-darkText lg:text-4xl text-3xl font-semibold">
+            <h2 className="text-primary dark:text-darkText lg:text-4xl text-3xl font-semibold font-spartan">
               Everything has beauty, but not everyone sees it
             </h2>
           </div>

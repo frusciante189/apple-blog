@@ -42,7 +42,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="md:hidden block"
               >
-                <List className="w-5 h-5" />
+                <List className="w-5 h-5 text-primary dark:text-darkText" />
               </button>
             </div>
           </nav>
