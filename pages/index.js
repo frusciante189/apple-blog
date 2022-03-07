@@ -8,7 +8,8 @@ export default function Home({ firstFeaturedPost }) {
     <>
       <FeaturedPost post={firstFeaturedPost} />
       <Posts />
-      <Newsletter />
+      {/* <Newsletter /> */}
+      <FeaturedPost post={firstFeaturedPost} />
       <Posts />
     </>
   );

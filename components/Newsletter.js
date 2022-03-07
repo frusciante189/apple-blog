@@ -3,7 +3,7 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className="md:min-h-[600px] md:py-4 py-12 flex items-center justify-start px-4 md:px-8 relative">
+    <div className="md:min-h-[600px] sm:h-[400px] h-[350px] md:py-4 py-12 flex items-center justify-start px-4 md:px-8 relative">
       <div className="bg-neutral-50 rounded-lg dark:bg-darkBg relative z-20 px-8 pb-10 pt-4 max-w-lg w-full ">
         <div>Join Newsletter</div>
         <div className="flex space-x-4 relative mt-4">

@@ -33,6 +33,7 @@ export const getPostDetails = async (slug) => {
         }
         createdAt
         postExcerpt
+        excerpt
         slug
         title
         featuredImage {

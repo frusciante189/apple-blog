@@ -7,16 +7,16 @@ const FeaturedPost = ({ post }) => {
   return (
     <section className="lg:py-16 sm:py-12 py-8">
       <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 xl:gap-x-12 lg:gap-x-4 gap-5 gap-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 xl:gap-x-12 lg:gap-x-4 gap-5 md:gap-y-10">
           <div className="md:col-span-7 text-primary dark:text-darkText md:order-1 order-2">
             <div>
               <p className="font-source text-sm font-medium">
                 {moment(post.createdAt).format("DD MMM YYYY")}
               </p>
             </div>
-            <div className="mt-5">
+            <div className="lg:mt-5 mt-10">
               <Link href={`/post/${post.slug}`}>
-                <h1 className="xl:text-7xl lg:text-6xl text-5xl font-bold font-spartan md:text-left text-center cursor-pointer">
+                <h1 className="xl:text-7xl lg:text-6xl sm:text-5xl text-4xl font-bold font-spartan md:text-left text-center cursor-pointer">
                   {post.title}
                 </h1>
               </Link>
@@ -26,7 +26,7 @@ const FeaturedPost = ({ post }) => {
                 {post.excerpt}
               </p>
             </div>
-            <div className="md:mt-10 mt-8">
+            <div className="lg:mt-10 md:mt-8 mt-4">
               <Link href={`tag/${post.categories[0].slug}`}>
                 <a className="text-sm font-source">
                   #{post.categories[0].title}
