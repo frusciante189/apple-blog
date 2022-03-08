@@ -52,10 +52,11 @@ const MobileMenu = ({ featuredCategories }) => {
       </div>
       <div className="absolute top-0 right-0 focus:outline-none">
         <button
-          className="dark:text-darkTitle text-lightTitle p-3 hover:rotate-90 transition-all duration-300 transform ease-in-out"
+          className="dark:text-darkText text-primary p-3 hover:rotate-90 transition-all duration-300 transform ease-in-out"
           onClick={() => setIsOpen(false)}
         >
           <X className="w-8 h-8" />
+          <span className="sr-only">Close</span>
         </button>
       </div>
     </div>
