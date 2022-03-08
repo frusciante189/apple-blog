@@ -15,10 +15,18 @@ const Navbar = ({ featuredCategories }) => {
         <div className="lg:px-8 sm:px-6 px-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <Link href="/">
+              {/* <Link href="/">
                 <a className="font-spartan text-3xl font-semibold text-primary dark:text-darkText">
                   Deriate
                 </a>
+              </Link> */}
+              <Link href="/">
+                <div className="w-[120px] h-[35px] relative">
+                  <Image
+                    src="https://media.graphcms.com/UzUpTbVUSyVZzLBCI7NW?_ga=2.225340762.1788949347.1646580573-1778747608.1642625803"
+                    layout="fill"
+                  />
+                </div>
               </Link>
               <div className="md:flex hidden space-x-2">
                 {featuredCategories.map((category, index) => {
