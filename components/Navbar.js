@@ -21,7 +21,7 @@ const Navbar = ({ featuredCategories }) => {
                 </a>
               </Link> */}
               <Link href="/">
-                <div className="w-[120px] h-[35px] relative">
+                <div className="w-[120px] h-[35px] relative cursor-pointer">
                   <Image
                     src="https://media.graphcms.com/UzUpTbVUSyVZzLBCI7NW?_ga=2.225340762.1788949347.1646580573-1778747608.1642625803"
                     layout="fill"
