@@ -25,6 +25,7 @@ const Navbar = ({ featuredCategories }) => {
                   <Image
                     src="https://media.graphcms.com/UzUpTbVUSyVZzLBCI7NW?_ga=2.225340762.1788949347.1646580573-1778747608.1642625803"
                     layout="fill"
+                    alt="logo"
                   />
                 </div>
               </Link>
