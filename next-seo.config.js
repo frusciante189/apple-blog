@@ -1,6 +1,6 @@
 export default {
   title: "Deriate",
-  description: "Apple Ekosistemi hakkında haberler",
+  description: "Apple Ekosistemi hakkında haberler, dedikodular, incelemeler",
   canonical: "https://www.deriate.com/",
   openGraph: {
     type: "website",
