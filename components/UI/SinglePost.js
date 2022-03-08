@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SinglePost = ({ post }) => {
   return (
-    <section className="xl:pl-6 xl:pr-3 sm:px-3 py-2.5 md:border-l border-dashed border-primary dark:border-darkText border-opacity-70">
+    <section className="xl:pl-6 xl:pr-3 sm:px-3 py-2.5 even:md:border-l even:border-dashed border-primary dark:border-darkText border-opacity-70">
       <div>
         <Link href={`/post/${post.slug}`}>
           <div className="aspect-w-16 aspect-h-9 relative md:hidden block cursor-pointer">
