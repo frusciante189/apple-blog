@@ -9,7 +9,7 @@ export default {
     site_name: "Deriate",
     images: [
       {
-        url: "https://media.graphcms.com/hRN5yfVQTKbRcZk8UUN7?_ga=2.209603154.1788949347.1646580573-1778747608.1642625803",
+        url: "https://media.graphcms.com/2AFiROFlTiChElDOQOkw?_ga=2.225864026.1788949347.1646580573-1778747608.1642625803",
         alt: "Deriate",
       },
     ],
