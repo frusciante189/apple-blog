@@ -4,6 +4,7 @@ import React from "react";
 import { getFeaturedCategories, getPostDetails, getPosts } from "../../library";
 import { NextSeo } from "next-seo";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const PostDetail = ({ postDetails, featuredCategories }) => {
   const SEO = {
