@@ -72,7 +72,6 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
           </div>
         </div>
       </article>
-      <Footer featuredCategories={featuredCategories} />
     </>
   );
 };
@@ -88,6 +87,7 @@ export async function getStaticProps({ params }) {
       postDetails,
       featuredCategories,
     },
+    revalidate: 30,
   };
 }
 

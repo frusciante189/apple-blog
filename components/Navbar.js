@@ -5,6 +5,7 @@ import { useProvider } from "../context/context";
 import DarkMode from "./UI/DarkMode";
 import MobileMenu from "./UI/MobileMenu";
 import Overlay from "./UI/Overlay";
+import Image from "next/image";
 
 const Navbar = ({ featuredCategories }) => {
   const { isOpen, setIsOpen } = useProvider();

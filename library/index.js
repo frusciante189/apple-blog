@@ -117,7 +117,7 @@ export const getHomePosts = async () => {
 export const getFeaturedCategories = async () => {
   const query = gql`
     query MyQuery {
-      categories(where: { featuredCategory: true }) {
+      categories(where: { featuredCategory: true }, orderBy: updatedAt_DESC) {
         categoryImage {
           url
         }
@@ -129,4 +129,61 @@ export const getFeaturedCategories = async () => {
   `;
   const result = await request(graphqlAPI, query);
   return result.categories;
+};
+
+export const getCategories = async () => {
+  const query = gql`
+    query MyQuery {
+      categories {
+        title
+        slug
+        categoryImage {
+          url
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.categories;
+};
+
+export const getCategoryPosts = async (slug) => {
+  const query = gql`
+    query GetCategoryPosts($slug: String!) {
+      postsConnection(
+        orderBy: createdAt_DESC
+        where: { categories_some: { slug: $slug } }
+      ) {
+        edges {
+          node {
+            excerpt
+            createdAt
+            slug
+            title
+            featuredImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.postsConnection.edges;
+};
+
+export const getCategoryImages = async (slug) => {
+  const query = gql`
+    query GetCategoryImages($slug: String!) {
+      category(where: { slug: $slug }) {
+        categoryImage {
+          url
+        }
+        title
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.category;
 };

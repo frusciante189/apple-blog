@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       <main className="dark:bg-darkBg bg-neutral-50 antialiased transition-colors duration-300 ease-in-out selection:bg-purple-500">
         {children}
       </main>
+      <Footer />
     </Provider>
   );
 };

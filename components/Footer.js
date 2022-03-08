@@ -18,7 +18,7 @@ const Footer = ({ featuredCategories }) => {
             </a>
           </Link>
         </div>
-        <nav className="flex sm:flex-row flex-col items-center justify-center lg:space-x-2 space-x-1 md:mt-10 mt-5">
+        {/* <nav className="flex sm:flex-row flex-col items-center justify-center lg:space-x-2 space-x-1 md:mt-10 mt-5">
           {featuredCategories.map((category, index) => {
             return (
               <Link href={`/tag/${category.slug}`} key={index}>
@@ -28,8 +28,7 @@ const Footer = ({ featuredCategories }) => {
               </Link>
             );
           })}
-        </nav>
-
+        </nav> */}
         <div className="mt-10">
           <div className="flex space-x-4 items-center justify-center text-primary dark:text-darkText">
             <TwitterLogo size={24} />

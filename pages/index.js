@@ -18,7 +18,6 @@ export default function Home({
       <Navbar featuredCategories={featuredCategories} />
       <FeaturedPost post={firstFeaturedPost} />
       <Posts posts={homePosts} />
-      <Footer featuredCategories={featuredCategories} />
     </>
   );
 }
