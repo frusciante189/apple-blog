@@ -31,7 +31,9 @@ const Footer = ({ featuredCategories }) => {
         </nav> */}
         <div className="mt-10">
           <div className="flex space-x-4 items-center justify-center text-primary dark:text-darkText">
-            <TwitterLogo size={24} />
+            <Link href="https://twitter.com/deriateblog" passHref>
+              <TwitterLogo size={24} />
+            </Link>
             {/* <InstagramLogo size={24} />
             <TelegramLogo size={24} />
             <FacebookLogo size={24} /> */}
