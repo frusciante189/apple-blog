@@ -6,7 +6,7 @@ import DarkMode from "./UI/DarkMode";
 import MobileMenu from "./UI/MobileMenu";
 import Overlay from "./UI/Overlay";
 
-const Navbar = () => {
+const Navbar = ({ featuredCategories }) => {
   const { isOpen, setIsOpen } = useProvider();
   return (
     <>
@@ -19,19 +19,16 @@ const Navbar = () => {
                   Deriate
                 </a>
               </Link>
-              <div className="md:flex hidden space-x-2 font-spartan text-sm font-medium text-primary dark:text-darkText">
-                <Link href="/">
-                  <a>News</a>
-                </Link>
-                <Link href="/">
-                  <a>Reviews</a>
-                </Link>
-                <Link href="/">
-                  <a>Announcements</a>
-                </Link>
-                <Link href="/">
-                  <a>iPhone</a>
-                </Link>
+              <div className="md:flex hidden space-x-2">
+                {featuredCategories.map((category, index) => {
+                  return (
+                    <Link href={`/tag/${category.slug}`} key={index}>
+                      <a className="font-spartan text-sm font-medium text-primary dark:text-darkText">
+                        {category.title}
+                      </a>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
             <div className="flex space-x-4 items-center">
@@ -48,7 +45,11 @@ const Navbar = () => {
           </nav>
         </div>
       </header>
-      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MobileMenu
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        featuredCategories={featuredCategories}
+      />
       <Overlay isOpen={isOpen} />
     </>
   );

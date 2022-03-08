@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { getPostDetails, getPosts } from "../../library";
+import { getFeaturedCategories, getPostDetails, getPosts } from "../../library";
 import { NextSeo } from "next-seo";
+import Navbar from "../../components/Navbar";
 
-const PostDetail = ({ postDetails }) => {
+const PostDetail = ({ postDetails, featuredCategories }) => {
   const SEO = {
     title: `Deriate | ${postDetails.title}`,
     description: postDetails.excerpt,
@@ -24,6 +25,7 @@ const PostDetail = ({ postDetails }) => {
 
   return (
     <>
+      <Navbar featuredCategories={featuredCategories} />
       <NextSeo {...SEO} />
       <article className="lg:py-20 sm:py-16 py-12">
         <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
@@ -31,9 +33,9 @@ const PostDetail = ({ postDetails }) => {
             {/* header */}
             <div className="border-b pb-10">
               <div className="text-center font-source text-sm">
-                <Link href={`/tag/${postDetails.categories[0].slug}`}>
+                <Link href={`/tag/${postDetails.categories[0]?.slug}`}>
                   <a className="lineEffect relative text-center after:bg-purple-500 text-primary dark:text-darkText">
-                    {postDetails.categories[0].title}
+                    {postDetails.categories[0]?.title}
                   </a>
                 </Link>
               </div>
@@ -61,7 +63,7 @@ const PostDetail = ({ postDetails }) => {
               </div>
               <div className="md:mt-10 mt-5">
                 <div
-                  className="prose max-w-5xl mx-auto prose-neutral dark:prose-invert font-mulish prose-lg"
+                  className="prose max-w-5xl mx-auto prose-neutral dark:prose-invert font-mulish prose-lg prose-img:mx-auto prose-a:decoration-purple-500 prose-a:decoration-2"
                   dangerouslySetInnerHTML={{ __html: postDetails.content.html }}
                 />
               </div>
@@ -69,6 +71,7 @@ const PostDetail = ({ postDetails }) => {
           </div>
         </div>
       </article>
+      <Footer featuredCategories={featuredCategories} />
     </>
   );
 };
@@ -77,10 +80,12 @@ export default PostDetail;
 
 export async function getStaticProps({ params }) {
   const postDetails = (await getPostDetails(params.slug)) || [];
+  const featuredCategories = (await getFeaturedCategories()) || [];
 
   return {
     props: {
       postDetails,
+      featuredCategories,
     },
   };
 }
