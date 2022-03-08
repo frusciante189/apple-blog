@@ -1,36 +1,45 @@
 import FeaturedPost from "../components/FeaturedPost";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Posts from "../components/Posts";
 import {
   getFeaturedCategories,
+  getFirst4HomePosts,
   getFirstFeaturedPost,
-  getHomePosts,
+  getSecond4HomePosts,
+  getSecondFeaturedPost,
 } from "../library";
 
 export default function Home({
   firstFeaturedPost,
-  homePosts,
+  secondFeaturedPost,
+  firstHomePosts,
+  secondHomePosts,
   featuredCategories,
 }) {
   return (
     <>
       <Navbar featuredCategories={featuredCategories} />
       <FeaturedPost post={firstFeaturedPost} />
-      <Posts posts={homePosts} />
+      <Posts posts={firstHomePosts} />
+      <FeaturedPost post={secondFeaturedPost} />
+      <Posts posts={secondHomePosts} />
     </>
   );
 }
 
 export async function getStaticProps() {
   const firstFeaturedPost = (await getFirstFeaturedPost()) || [];
-  const homePosts = (await getHomePosts()) || [];
+  const secondFeaturedPost = (await getSecondFeaturedPost()) || [];
+  const firstHomePosts = (await getFirst4HomePosts()) || [];
+  const secondHomePosts = (await getSecond4HomePosts()) || [];
   const featuredCategories = (await getFeaturedCategories()) || [];
 
   return {
     props: {
       firstFeaturedPost,
-      homePosts,
+      secondFeaturedPost,
+      firstHomePosts,
+      secondHomePosts,
       featuredCategories,
     },
     revalidate: 30,
