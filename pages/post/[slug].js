@@ -68,6 +68,7 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
                     layout="fill"
                     objectFit="cover"
                     src={postDetails.featuredImage.url}
+                    alt={postDetails.title}
                   />
                 </div>
               </motion.div>

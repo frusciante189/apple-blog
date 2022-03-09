@@ -27,6 +27,7 @@ const Tags = ({ categoryPosts, categoryInfo, featuredCategories }) => {
                   src={categoryInfo.categoryImage.url}
                   layout="fill"
                   objectFit="cover"
+                  alt={categoryInfo.title}
                 />
               </div>
               <p className="font-spartan text-primary dark:text-darkText mt-10 text-center text-2xl font-medium">

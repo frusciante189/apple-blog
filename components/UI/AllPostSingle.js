@@ -31,11 +31,8 @@ const AllPostSingle = ({ post }) => {
       <div className="flex space-x-4 mt-4">
         {post.categories.map((category, index) => {
           return (
-            <Link href={`/tag/${category.slug}`}>
-              <a
-                className="text-xs font-spartan text-primary dark:text-darkText cursor-pointer"
-                key={index}
-              >
+            <Link href={`/tag/${category.slug}`} key={index}>
+              <a className="text-xs font-spartan text-primary dark:text-darkText cursor-pointer">
                 #{category.title}
               </a>
             </Link>

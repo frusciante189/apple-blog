@@ -34,6 +34,7 @@ const Newsletter = () => {
         objectFit="cover"
         unoptimized
         className="absolute inset-0 z-10"
+        alt="logo"
       />
     </div>
   );
