@@ -36,7 +36,13 @@ const MobileMenu = ({ featuredCategories }) => {
           <nav className="flex flex-col items-start mt-10 space-y-5">
             {featuredCategories?.map((category, index) => {
               return (
-                <Link href={`/tag/${category.slug}`} key={index}>
+                <Link
+                  href={`${
+                    (category.title === "Haberler" && "/posts") ||
+                    `/tag/${category.slug}`
+                  }`}
+                  key={index}
+                >
                   <a className="dark:text-darkText text-primary font-spartan text-sm font-medium">
                     {category.title}
                   </a>
@@ -50,7 +56,9 @@ const MobileMenu = ({ featuredCategories }) => {
             <DarkMode />
           </div>
           <div className="flex space-x-4 items-center justify-center dark:text-darkText text-lightText mt-3">
-            <TwitterLogo size={24} className="cursor-pointer" />
+            <Link href="https://twitter.com/deriateblog" passHref>
+              <TwitterLogo size={24} className="cursor-pointer" />
+            </Link>
             {/* <InstagramLogo size={24} />
             <TelegramLogo size={24} />
             <FacebookLogo size={24} /> */}
