@@ -140,7 +140,7 @@ export const getSecond4HomePosts = async () => {
   const query = gql`
     query MyQuery {
       postsConnection(
-        where: { isFirstPost: false }
+        where: { isFirstPost: false, featured: false }
         first: 4
         skip: 2
         orderBy: createdAt_DESC
