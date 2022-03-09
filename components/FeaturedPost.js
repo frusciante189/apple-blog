@@ -27,9 +27,9 @@ const FeaturedPost = ({ post }) => {
               </p>
             </div>
             <div className="lg:mt-10 md:mt-8 mt-4">
-              <Link href={`tag/${post.categories[0].slug}`}>
+              <Link href={`tag/${post.categories[0]?.slug}`}>
                 <a className="text-sm font-source">
-                  #{post.categories[0].title}
+                  #{post.categories[0]?.title}
                 </a>
               </Link>
             </div>
