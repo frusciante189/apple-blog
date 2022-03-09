@@ -29,11 +29,17 @@ const Navbar = ({ featuredCategories }) => {
                   />
                 </div>
               </Link>
-              <div className="md:flex hidden space-x-2">
+              <div className="md:flex hidden space-x-6">
                 {featuredCategories.map((category, index) => {
                   return (
-                    <Link href={`/tag/${category.slug}`} key={index}>
-                      <a className="font-spartan text-sm font-medium text-primary dark:text-darkText">
+                    <Link
+                      href={`${
+                        (category.title === "Haberler" && "/posts") ||
+                        `/tag/${category.slug}`
+                      }`}
+                      key={index}
+                    >
+                      <a className="font-spartan text-xs font-medium text-primary dark:text-darkText">
                         {category.title}
                       </a>
                     </Link>

@@ -4,7 +4,7 @@ import React from "react";
 import { getFeaturedCategories, getPostDetails, getPosts } from "../../library";
 import { NextSeo } from "next-seo";
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import { motion } from "framer-motion";
 
 const PostDetail = ({ postDetails, featuredCategories }) => {
   const SEO = {
@@ -25,14 +25,19 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
   };
 
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <Navbar featuredCategories={featuredCategories} />
       <NextSeo {...SEO} />
       <article className="lg:py-20 sm:py-16 py-12">
         <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
           <div>
             {/* header */}
-            <div className="border-b pb-10">
+            <motion.div
+              className="border-b pb-10"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               <div className="text-center font-source text-sm">
                 <Link href={`/tag/${postDetails.categories[0]?.slug}`}>
                   <a className="lineEffect relative text-center after:bg-purple-500 text-primary dark:text-darkText">
@@ -50,10 +55,14 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
                   {postDetails.postExcerpt}
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* content */}
             <div className="md:mt-10 mt-7">
-              <div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
                 <div className="relative sm:aspect-w-16 sm:aspect-h-9 aspect-w-1 aspect-h-1">
                   <Image
                     layout="fill"
@@ -61,7 +70,7 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
                     src={postDetails.featuredImage.url}
                   />
                 </div>
-              </div>
+              </motion.div>
               <div className="md:mt-10 mt-5">
                 <div
                   className="prose max-w-5xl mx-auto prose-neutral dark:prose-invert font-mulish prose-lg prose-img:mx-auto prose-a:decoration-purple-500 prose-a:decoration-2"
@@ -72,7 +81,7 @@ const PostDetail = ({ postDetails, featuredCategories }) => {
           </div>
         </div>
       </article>
-    </>
+    </motion.div>
   );
 };
 

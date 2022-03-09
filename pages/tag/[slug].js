@@ -8,15 +8,20 @@ import {
   getFeaturedCategories,
 } from "../../library";
 import CategoryPost from "../../components/UI/CategoryPost";
+import { motion } from "framer-motion";
 
 const Tags = ({ categoryPosts, categoryInfo, featuredCategories }) => {
   return (
-    <>
+    <motion.div exit={{ opacity: 0 }}>
       <Navbar featuredCategories={featuredCategories} />
       <section className="lg:py-16 sm:py-12 py-8">
         <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
           <div className="">
-            <div>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               <div className="w-[250px] h-[250px] relative rounded-full overflow-hidden mx-auto">
                 <Image
                   src={categoryInfo.categoryImage.url}
@@ -27,7 +32,7 @@ const Tags = ({ categoryPosts, categoryInfo, featuredCategories }) => {
               <p className="font-spartan text-primary dark:text-darkText mt-10 text-center text-2xl font-medium">
                 #{categoryInfo.title}
               </p>
-            </div>
+            </motion.div>
             <div className="mt-10">
               {categoryPosts.map((post, index) => {
                 return <CategoryPost post={post.node} key={index} />;
@@ -36,7 +41,7 @@ const Tags = ({ categoryPosts, categoryInfo, featuredCategories }) => {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 

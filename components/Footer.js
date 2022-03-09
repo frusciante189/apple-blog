@@ -6,6 +6,7 @@ import {
   FacebookLogo,
   Copyright,
 } from "phosphor-react";
+import Image from "next/image";
 
 const Footer = ({ featuredCategories }) => {
   return (
@@ -13,9 +14,13 @@ const Footer = ({ featuredCategories }) => {
       <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
         <div className="flex space-x-4 items-center justify-center">
           <Link href="/">
-            <a className="font-spartan text-4xl font-semibold text-primary dark:text-darkText">
-              Deriate
-            </a>
+            <div className="w-[120px] h-[35px] relative cursor-pointer">
+              <Image
+                src="https://media.graphcms.com/UzUpTbVUSyVZzLBCI7NW?_ga=2.225340762.1788949347.1646580573-1778747608.1642625803"
+                layout="fill"
+                alt="logo"
+              />
+            </div>
           </Link>
         </div>
         {/* <nav className="flex sm:flex-row flex-col items-center justify-center lg:space-x-2 space-x-1 md:mt-10 mt-5">

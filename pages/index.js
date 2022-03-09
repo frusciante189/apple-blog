@@ -8,6 +8,32 @@ import {
   getSecond4HomePosts,
   getSecondFeaturedPost,
 } from "../library";
+import { motion } from "framer-motion";
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 5,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
 
 export default function Home({
   firstFeaturedPost,
@@ -17,13 +43,20 @@ export default function Home({
   featuredCategories,
 }) {
   return (
-    <>
-      <Navbar featuredCategories={featuredCategories} />
-      <FeaturedPost post={firstFeaturedPost} />
-      <Posts posts={firstHomePosts} />
+    <motion.div
+      exit={{ opacity: 1 }}
+      initial="initial"
+      animate="animate"
+      variants={stagger}
+    >
+      <motion.div variants={fadeInUp}>
+        <Navbar featuredCategories={featuredCategories} />
+        <FeaturedPost post={firstFeaturedPost} />
+        <Posts posts={firstHomePosts} />
+      </motion.div>
       <FeaturedPost post={secondFeaturedPost} />
       <Posts posts={secondHomePosts} />
-    </>
+    </motion.div>
   );
 }
 

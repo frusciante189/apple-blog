@@ -9,6 +9,7 @@ import {
 } from "phosphor-react";
 import { useProvider } from "../../context/context";
 import DarkMode from "./DarkMode";
+import Image from "next/image";
 
 const MobileMenu = ({ featuredCategories }) => {
   const { isOpen, setIsOpen, ref } = useProvider();
@@ -23,9 +24,15 @@ const MobileMenu = ({ featuredCategories }) => {
     >
       <div className="pt-10 pb-5 px-5 h-full flex flex-col">
         <div className="mt-3">
-          <h1 className="lg:text-4xl sm:text-3xl text-2xl text-center font-medium dark:text-darkText text-primary font-spartan">
-            Deriate
-          </h1>
+          <Link href="/">
+            <div className="w-[120px] h-[35px] relative cursor-pointer mx-auto">
+              <Image
+                src="https://media.graphcms.com/UzUpTbVUSyVZzLBCI7NW?_ga=2.225340762.1788949347.1646580573-1778747608.1642625803"
+                layout="fill"
+                alt="logo"
+              />
+            </div>
+          </Link>
           <nav className="flex flex-col items-start mt-10 space-y-5">
             {featuredCategories?.map((category, index) => {
               return (

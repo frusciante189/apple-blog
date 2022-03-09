@@ -244,3 +244,25 @@ export const getCategoryImages = async (slug) => {
   const result = await request(graphqlAPI, query, { slug });
   return result.category;
 };
+
+export const getAllPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      posts(orderBy: createdAt_DESC) {
+        excerpt
+        createdAt
+        title
+        slug
+        featuredImage {
+          url
+        }
+        categories {
+          title
+          slug
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
