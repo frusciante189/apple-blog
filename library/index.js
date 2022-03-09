@@ -107,7 +107,7 @@ export const getFirst4HomePosts = async () => {
     query MyQuery {
       postsConnection(
         where: { featured: false, isFirstPost: false }
-        first: 4
+        first: 2
         orderBy: createdAt_DESC
       ) {
         edges {
@@ -142,7 +142,7 @@ export const getSecond4HomePosts = async () => {
       postsConnection(
         where: { isFirstPost: false }
         first: 4
-        skip: 4
+        skip: 2
         orderBy: createdAt_DESC
       ) {
         edges {

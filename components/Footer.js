@@ -37,15 +37,15 @@ const Footer = ({ featuredCategories }) => {
         <div className="mt-10">
           <div className="flex space-x-4 items-center justify-center text-primary dark:text-darkText">
             <Link href="https://twitter.com/deriateblog" passHref>
-              <TwitterLogo size={24} />
+              <TwitterLogo size={24} className="cursor-pointer" />
             </Link>
             {/* <InstagramLogo size={24} />
             <TelegramLogo size={24} />
             <FacebookLogo size={24} /> */}
           </div>
         </div>
-        <p className="mt-7 text-center text-primary dark:text-darkText inline-flex items-center justify-center w-full">
-          <Copyright className="mr-2" /> Copyright 2021, All Rights Reserved
+        <p className="mt-7 text-sm text-center text-primary dark:text-darkText inline-flex items-center justify-center w-full">
+          <Copyright className="mr-2" /> Copyright 2022, All Rights Reserved
         </p>
       </div>
     </footer>

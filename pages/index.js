@@ -9,6 +9,7 @@ import {
   getSecondFeaturedPost,
 } from "../library";
 import { motion } from "framer-motion";
+import MoreButton from "../components/UI/MoreButton";
 
 const stagger = {
   animate: {
@@ -53,9 +54,10 @@ export default function Home({
         <Navbar featuredCategories={featuredCategories} />
         <FeaturedPost post={firstFeaturedPost} />
         <Posts posts={firstHomePosts} />
+        <FeaturedPost post={secondFeaturedPost} />
+        <Posts posts={secondHomePosts} />
+        <MoreButton />
       </motion.div>
-      <FeaturedPost post={secondFeaturedPost} />
-      <Posts posts={secondHomePosts} />
     </motion.div>
   );
 }

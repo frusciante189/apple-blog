@@ -14,7 +14,7 @@ const AllPostSingle = ({ post }) => {
           {moment(post.createdAt).format("DD MMM YYYY")}
         </p>
       </div>
-      <div className="mt-5 relative lineEffect after:bg-purple-500 pb-4">
+      <div className="mt-5 relative lineEffect after:bg-purple-500 pb-2">
         <Link href={`post/${post.slug}`}>
           <h1 className="text-center text-primary dark:text-darkText font-spartan cursor-pointer">
             {post.title}

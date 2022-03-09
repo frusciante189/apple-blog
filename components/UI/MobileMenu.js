@@ -50,7 +50,7 @@ const MobileMenu = ({ featuredCategories }) => {
             <DarkMode />
           </div>
           <div className="flex space-x-4 items-center justify-center dark:text-darkText text-lightText mt-3">
-            <TwitterLogo size={24} />
+            <TwitterLogo size={24} className="cursor-pointer" />
             {/* <InstagramLogo size={24} />
             <TelegramLogo size={24} />
             <FacebookLogo size={24} /> */}
