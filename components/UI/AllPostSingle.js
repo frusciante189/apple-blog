@@ -6,7 +6,7 @@ import moment from "moment";
 const AllPostSingle = ({ post }) => {
   return (
     <div>
-      <div className="aspect-1 relative  mx-auto">
+      <div className="aspect-w-1 aspect-h-1 relative  mx-auto">
         <Image layout="fill" objectFit="cover" src={post.featuredImage.url} />
       </div>
       <div className="mt-1">
