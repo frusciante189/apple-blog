@@ -7,7 +7,7 @@ const AllPostSingle = ({ post }) => {
   return (
     <div>
       <Link href={`/post/${post.slug}`}>
-        <div className="aspect-w-1 aspect-h-1 relative  mx-auto">
+        <div className="aspect-w-1 aspect-h-1 relative mx-auto cursor-pointer">
           <Image layout="fill" objectFit="cover" src={post.featuredImage.url} />
         </div>
       </Link>
