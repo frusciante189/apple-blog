@@ -6,9 +6,11 @@ import moment from "moment";
 const AllPostSingle = ({ post }) => {
   return (
     <div>
-      <div className="aspect-w-1 aspect-h-1 relative  mx-auto">
-        <Image layout="fill" objectFit="cover" src={post.featuredImage.url} />
-      </div>
+      <Link href={`/post/${post.slug}`}>
+        <div className="aspect-w-1 aspect-h-1 relative  mx-auto">
+          <Image layout="fill" objectFit="cover" src={post.featuredImage.url} />
+        </div>
+      </Link>
       <div className="mt-1">
         <p className="font-source text-sm text-primary dark:text-darkText">
           {moment(post.createdAt).format("DD MMM YYYY")}
