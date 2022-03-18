@@ -16,7 +16,7 @@ const FeaturedPost = ({ post }) => {
             </div>
             <div className="lg:mt-5 mt-10">
               <Link href={`/post/${post.slug}`}>
-                <h1 className="xl:text-7xl lg:text-6xl sm:text-5xl text-4xl font-bold font-spartan md:text-left text-center cursor-pointer">
+                <h1 className="lg:text-6xl lg:leading-tight sm:text-5xl text-4xl font-bold font-spartan md:text-left text-center cursor-pointer">
                   {post.title}
                 </h1>
               </Link>
